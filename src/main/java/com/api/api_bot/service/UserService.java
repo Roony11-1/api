@@ -2,6 +2,7 @@ package com.api.api_bot.service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,13 @@ import lombok.RequiredArgsConstructor;
 public class UserService 
 {
     private final UserRepository _userRepository;
+
+    public User findByDiscordIdAndServerId(String discordId, String serverId) 
+    {
+        return _userRepository.findByDiscordIdAndServerId(discordId, serverId)
+            .orElseThrow(() -> new RuntimeException(
+                "No se ha encontrado un usuario con discordId: " + discordId + " y serverId: " + serverId));
+    }
 
     public List<User> saveAll(List<User> users)
     {

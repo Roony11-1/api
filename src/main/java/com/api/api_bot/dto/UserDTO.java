@@ -24,4 +24,7 @@ public class UserDTO
 
     private Instant joinedAt;
     private Instant lastSync;
+    private Instant lastMenssageAt;
+
+    private int messageCount;
 }

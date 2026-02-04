@@ -32,6 +32,9 @@ public class User implements IEntity<UserDTO>
 
     private Instant joinedAt;
     private Instant lastSync;
+    private Instant lastMenssageAt;
+
+    private int messageCount;
 
     @Override
     public UserDTO toDTO() 
@@ -48,6 +51,8 @@ public class User implements IEntity<UserDTO>
             .isAdmin(this.isAdmin)
             .joinedAt(this.joinedAt)
             .lastSync(this.lastSync)
+            .lastMenssageAt(this.lastMenssageAt)
+            .messageCount(this.messageCount)
             .build();
     }
 }
