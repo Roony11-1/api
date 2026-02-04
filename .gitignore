@@ -1,0 +1,79 @@
+# ======================
+# Maven
+# ======================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# ======================
+# Spring Boot
+# ======================
+*.log
+logs/
+spring.log
+
+# ======================
+# Java
+# ======================
+*.class
+hs_err_pid*
+
+# ======================
+# Lombok
+# ======================
+.lombok
+
+# ======================
+# Variables de entorno / config sensible
+# ======================
+.env
+.env.*
+application-local.yml
+application-local.yaml
+application-dev.yml
+application-dev.yaml
+application-prod.yml
+application-prod.yaml
+
+# (opcional pero recomendado)
+# deja versionado solo application.yml
+# y usa perfiles para lo demás
+
+# ======================
+# IDEs
+# ======================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse / STS
+.classpath
+.project
+.settings/
+.springBeans
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
