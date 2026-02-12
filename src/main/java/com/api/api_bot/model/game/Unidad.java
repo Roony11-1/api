@@ -1,9 +1,11 @@
-package com.api.api_bot.model;
+package com.api.api_bot.model.game;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.TypeAlias;
 
 import com.api.api_bot.dto.UnidadDTO;
 import com.api.api_bot.interfaces.IEntity;
+import com.api.api_bot.model.game.classes.Clase;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,6 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
+@TypeAlias("Unidad")
 public class Unidad implements IEntity<UnidadDTO>
 {
     @Id
@@ -21,6 +24,7 @@ public class Unidad implements IEntity<UnidadDTO>
     private String discordId;
     private String nombre;
     private Integer nivel;
+    private Clase clase;
 
     @Override
     public UnidadDTO toDTO() 
@@ -28,10 +32,9 @@ public class Unidad implements IEntity<UnidadDTO>
         return UnidadDTO.builder()
             .id(this.id)
             .discordId(this.discordId)
-            .nombre(this.nombre)
+            .nombre(this.nombre) 
             .nivel(this.nivel)
+            .clase(this.clase)
             .build();
     }
-
-    
 }

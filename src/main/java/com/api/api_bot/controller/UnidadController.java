@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.api_bot.dto.UnidadDTO;
-import com.api.api_bot.model.Unidad;
+import com.api.api_bot.model.game.Unidad;
 import com.api.api_bot.service.UnidadService;
 
 import lombok.RequiredArgsConstructor;

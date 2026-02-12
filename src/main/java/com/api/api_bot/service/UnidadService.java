@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.api.api_bot.model.Unidad;
+import com.api.api_bot.model.game.Estadisticas;
+import com.api.api_bot.model.game.Unidad;
+import com.api.api_bot.model.game.classes.Clase;
+import com.api.api_bot.repository.ClaseRepository;
 import com.api.api_bot.repository.UnidadRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -14,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class UnidadService 
 {
     private final UnidadRepository _unidadRepository;
+    private final ClaseRepository _classRepository;
 
     public List<Unidad> findByDiscordId(String discordId)
     {
@@ -28,10 +32,14 @@ public class UnidadService
 
     public Unidad saveDiscord(String nombre, Integer nivel, String discordId) 
     {
+        Clase clase = _classRepository.findById("Mirmidón")
+            .orElse(_classRepository.save(new Clase("Mirmidón", new Estadisticas(1))));
+
         Unidad unidad = Unidad.builder()
             .nombre(nombre != null ? nombre : "Unidad Sin Nombre")
             .nivel(nivel != null ? nivel : 1)
             .discordId(discordId)
+            .clase(clase)
             .build();
 
         return _unidadRepository.save(unidad);
