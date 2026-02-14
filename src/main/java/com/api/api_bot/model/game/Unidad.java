@@ -25,16 +25,4 @@ public class Unidad implements IEntity<UnidadDTO>
     private String nombre;
     private Integer nivel;
     private Clase clase;
-
-    @Override
-    public UnidadDTO toDTO() 
-    {
-        return UnidadDTO.builder()
-            .id(this.id)
-            .discordId(this.discordId)
-            .nombre(this.nombre) 
-            .nivel(this.nivel)
-            .clase(this.clase)
-            .build();
-    }
 }

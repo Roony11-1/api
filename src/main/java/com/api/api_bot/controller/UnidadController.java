@@ -36,7 +36,7 @@ public class UnidadController
 
         List<UnidadDTO> dtos = unidades
             .stream()
-            .map(unidad -> unidad.toDTO())
+            .map(UnidadDTO::new)
             .toList();
 
         return ResponseEntity.ok(dtos);
@@ -45,18 +45,20 @@ public class UnidadController
     @PostMapping
     public ResponseEntity<UnidadDTO> save(@RequestBody Unidad unidad)
     {
-        return ResponseEntity.ok(
-            _unidadService.save(unidad).toDTO());
+        Unidad unidadSaved = _unidadService.save(unidad);
+
+        return ResponseEntity.ok(new UnidadDTO(unidadSaved));
     }
 
     @PostMapping("/discord")
     public ResponseEntity<UnidadDTO> saveDiscord(
         @RequestParam(required = false) String nombre,
-        @RequestParam(required = false) Integer nivel,
+        @RequestParam String claseId,
         @RequestParam String discordId)
     {
-        return ResponseEntity.ok(
-            _unidadService.saveDiscord(nombre, nivel, discordId).toDTO());
+        Unidad unidadSaved = _unidadService.saveDiscord(nombre, claseId, discordId);
+
+        return ResponseEntity.ok(new UnidadDTO(unidadSaved));
     }
 
     @DeleteMapping("/discord")

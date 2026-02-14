@@ -28,7 +28,9 @@ public class UserController
         @RequestParam String discordId,
         @RequestParam String serverId)
     {
-        return ResponseEntity.ok(_userService.findByDiscordIdAndServerId(discordId, serverId).toDTO());
+        User user = _userService.findByDiscordIdAndServerId(discordId, serverId);
+        
+        return ResponseEntity.ok(new UserDTO(user));
     }
 
     @PostMapping
@@ -36,8 +38,10 @@ public class UserController
     {
         if (!isValidUser(user))
             return ResponseEntity.badRequest().build();
-        
-        return ResponseEntity.ok(_userService.save(user).toDTO());
+
+        User savedUser = _userService.save(user);
+
+        return ResponseEntity.ok(new UserDTO(savedUser));
     }
 
     @PostMapping("/bulk")
@@ -53,7 +57,7 @@ public class UserController
         return ResponseEntity.ok(
             savedUsers
                 .stream()
-                .map(user -> user.toDTO())
+                .map(UserDTO::new)
                 .toList());
     }
 

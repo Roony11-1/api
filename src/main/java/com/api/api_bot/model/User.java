@@ -35,24 +35,4 @@ public class User implements IEntity<UserDTO>
     private Instant lastMenssageAt;
 
     private int messageCount;
-
-    @Override
-    public UserDTO toDTO() 
-    {
-        return UserDTO.builder()
-            .id(this.id)
-            .discordId(this.discordId)
-            .serverId(this.serverId)
-            .isBot(this.isBot)
-            .username(this.username)
-            .globalName(this.globalName)
-            .nickname(this.nickname)
-            .isOwner(this.isOwner)
-            .isAdmin(this.isAdmin)
-            .joinedAt(this.joinedAt)
-            .lastSync(this.lastSync)
-            .lastMenssageAt(this.lastMenssageAt)
-            .messageCount(this.messageCount)
-            .build();
-    }
 }

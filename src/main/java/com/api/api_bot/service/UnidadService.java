@@ -30,14 +30,14 @@ public class UnidadService
         return _unidadRepository.save(unidad);
     }
 
-    public Unidad saveDiscord(String nombre, Integer nivel, String discordId) 
+    public Unidad saveDiscord(String nombre, String claseId, String discordId) 
     {
-        Clase clase = _classRepository.findById("Mirmidón")
+        Clase clase = _classRepository.findById(claseId)
             .orElse(_classRepository.save(new Clase("Mirmidón", new Estadisticas(1))));
 
         Unidad unidad = Unidad.builder()
             .nombre(nombre != null ? nombre : "Unidad Sin Nombre")
-            .nivel(nivel != null ? nivel : 1)
+            .nivel(1)
             .discordId(discordId)
             .clase(clase)
             .build();
