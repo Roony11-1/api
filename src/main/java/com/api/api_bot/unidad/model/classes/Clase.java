@@ -1,10 +1,10 @@
-package com.api.api_bot.model.game.classes;
+package com.api.api_bot.unidad.model.classes;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.api.api_bot.model.game.Estadisticas;
+import com.api.api_bot.unidad.model.Estadisticas;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

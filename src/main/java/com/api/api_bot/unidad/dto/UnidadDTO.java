@@ -1,7 +1,7 @@
-package com.api.api_bot.dto;
+package com.api.api_bot.unidad.dto;
 
-import com.api.api_bot.model.game.Unidad;
-import com.api.api_bot.model.game.classes.Clase;
+import com.api.api_bot.unidad.model.Unidad;
+import com.api.api_bot.unidad.model.classes.Clase;
 
 import lombok.Data;
 

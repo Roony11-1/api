@@ -1,8 +1,8 @@
-package com.api.api_bot.dto;
+package com.api.api_bot.users.dto;
 
 import java.time.Instant;
 
-import com.api.api_bot.model.User;
+import com.api.api_bot.users.model.User;
 
 import lombok.Data;
 

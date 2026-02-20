@@ -1,12 +1,12 @@
-package com.api.api_bot.service;
+package com.api.api_bot.users.service;
 
 import java.time.Instant;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.api.api_bot.model.User;
-import com.api.api_bot.repository.UserRepository;
+import com.api.api_bot.users.model.User;
+import com.api.api_bot.users.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

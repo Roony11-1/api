@@ -1,4 +1,4 @@
-package com.api.api_bot.controller;
+package com.api.api_bot.unidad.controller;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.api.api_bot.dto.UnidadDTO;
-import com.api.api_bot.model.game.Unidad;
-import com.api.api_bot.service.UnidadService;
+import com.api.api_bot.unidad.dto.UnidadDTO;
+import com.api.api_bot.unidad.model.Unidad;
+import com.api.api_bot.unidad.repository.UnidadService;
 
 import lombok.RequiredArgsConstructor;
 

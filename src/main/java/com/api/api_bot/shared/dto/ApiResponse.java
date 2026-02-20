@@ -1,4 +1,4 @@
-package com.api.api_bot.dto;
+package com.api.api_bot.shared.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

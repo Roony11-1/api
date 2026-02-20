@@ -1,4 +1,4 @@
-package com.api.api_bot.model.game;
+package com.api.api_bot.unidad.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,12 +1,12 @@
-package com.api.api_bot.model;
+package com.api.api_bot.users.model;
 
 import java.time.Instant;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.api.api_bot.dto.UserDTO;
-import com.api.api_bot.interfaces.IEntity;
+import com.api.api_bot.shared.interfaces.IEntity;
+import com.api.api_bot.users.dto.UserDTO;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,9 +1,9 @@
-package com.api.api_bot.repository;
+package com.api.api_bot.unidad.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.api.api_bot.model.game.Unidad;
+import com.api.api_bot.unidad.model.Unidad;
 
 import java.util.List;
 

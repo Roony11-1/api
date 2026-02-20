@@ -1,14 +1,12 @@
-package com.api.api_bot.service;
+package com.api.api_bot.unidad.repository;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.api.api_bot.model.game.Estadisticas;
-import com.api.api_bot.model.game.Unidad;
-import com.api.api_bot.model.game.classes.Clase;
-import com.api.api_bot.repository.ClaseRepository;
-import com.api.api_bot.repository.UnidadRepository;
+import com.api.api_bot.unidad.model.Estadisticas;
+import com.api.api_bot.unidad.model.Unidad;
+import com.api.api_bot.unidad.model.classes.Clase;
 
 import lombok.RequiredArgsConstructor;
 

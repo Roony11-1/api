@@ -1,4 +1,4 @@
-package com.api.api_bot.controller;
+package com.api.api_bot.users.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.api.api_bot.dto.UserDTO;
-import com.api.api_bot.model.User;
-import com.api.api_bot.service.UserService;
+import com.api.api_bot.users.dto.UserDTO;
+import com.api.api_bot.users.model.User;
+import com.api.api_bot.users.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
