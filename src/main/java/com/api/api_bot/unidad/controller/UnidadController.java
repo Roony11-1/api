@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.api.api_bot.unidad.dto.UnidadDTO;
 import com.api.api_bot.unidad.model.Unidad;
-import com.api.api_bot.unidad.repository.UnidadService;
+import com.api.api_bot.unidad.service.UnidadService;
 
 import lombok.RequiredArgsConstructor;
 

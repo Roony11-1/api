@@ -1,4 +1,4 @@
-package com.api.api_bot.unidad.repository;
+package com.api.api_bot.unidad.service;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import com.api.api_bot.unidad.model.Estadisticas;
 import com.api.api_bot.unidad.model.Unidad;
 import com.api.api_bot.unidad.model.classes.Clase;
+import com.api.api_bot.unidad.repository.ClaseRepository;
+import com.api.api_bot.unidad.repository.UnidadRepository;
 
 import lombok.RequiredArgsConstructor;
 
